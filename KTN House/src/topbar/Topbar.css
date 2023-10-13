@@ -35,7 +35,7 @@ nav {
 }
 
 .nav-container {
-  background-color: red;
+  background-color: rgb(253, 251, 251);
   position: fixed;
   width: 100%;
 }
@@ -78,6 +78,23 @@ nav {
   background-color: transparent;
   border: none;
   outline: none;
+}
+.menu {
+  background-color: transparent;
+  width: 100px;
+  /* right: 30px;
+  top: 20px; */
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 770px) {
+  .hidden {
+    display: none;
+  }
+  .search-btn {
+    display: none;
+  }
 }
 
 /* ..............................bg-img header............................/ */

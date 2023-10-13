@@ -9,7 +9,8 @@ import UniqueCard from "../components/UniqueCard";
 
 const Posts = [
   {
-    title: "Title 1",
+    title:
+      "Instead of going out to dinner, buy good food. Cooking at home shows such affection. In a bad economy, it's more important to make yourself feel good.",
     profile:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
     background:
@@ -19,7 +20,8 @@ const Posts = [
     views: 132,
   },
   {
-    title: "Title 2 Lor",
+    title:
+      "Instead of going out to dinner, buy good food. Cooking at home shows such affection. In a bad economy, it's more important to make yourself feel good.",
     profile:
       "https://images.unsplash.com/photo-1504257432389-52343af06ae3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBvcnRyYWl0fGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60",
     background:
@@ -29,7 +31,8 @@ const Posts = [
     views: 132,
   },
   {
-    title: "Title 3",
+    title:
+      "Instead of going out to dinner, buy good food. Cooking at home shows such affection. In a bad economy, it's more important to make yourself feel good.",
     profile:
       "https://images.unsplash.com/photo-1504257432389-52343af06ae3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBvcnRyYWl0fGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60",
     background:
@@ -40,7 +43,7 @@ const Posts = [
   },
   {
     title:
-      "Title 6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, itaque voluptatum amet ipsum dignissimos quasi debitis minus. Voluptatum totam soluta quas, corrupti, rerum dicta quia enim, natus doloremque Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, itaque voluptatum amet ipsum dignissimos quasi debitis minus. Voluptatum totam soluta quas, corrupti, rerum dicta quia enim, natus doloremque ",
+      "Instead of going out to dinner, buy good food. Cooking at home shows such affection. In a bad economy, it's more important to make yourself feel good. ",
     profile:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9ydHJhaXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
     background:

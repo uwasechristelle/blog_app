@@ -1,6 +1,7 @@
 import "./topbar.css";
 import pic from "../assets/Rectangle 10.jpg";
 import { AiOutlineSearch } from "react-icons/ai";
+import { BiMenu } from "react-icons/bi";
 import { Link } from "react-router-dom";
 export default function Topbar() {
   return (
@@ -30,6 +31,9 @@ export default function Topbar() {
           <input type="text" placeholder="Search here............." />
         </div>
       </nav>
+      <div className="menu ">
+        <BiMenu />
+      </div>
       <div className="img">
         <img src={pic} alt="" />
       </div>
