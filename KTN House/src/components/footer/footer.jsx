@@ -59,7 +59,8 @@ const Footer = () => {
       <div className="col4">
         <p>
           @Copy;{new Date().getFullYear()}KTN COMPANY | All right reserved |
-          Terms and Service | Privacy
+          Terms and Service | Privacy | This template is made by{" "}
+          <span>Uwase Christelle</span>
         </p>
       </div>
     </div>

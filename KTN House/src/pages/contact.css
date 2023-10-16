@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  list-style: none;
+}
+.row-contact {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  justify-content: end;
+  padding: 1rem;
+  /* background-color: rgb(198, 43, 43); */
+}
+.row-contact .col-1 .field input {
+  width: 500px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+.row-contact .col-1 h3 {
+  font-size: 28px;
+  /* font-weight: 500; */
+  margin-bottom: 20px;
+}
+.row-contact textarea {
+  width: 500px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+/* .row-contact .col-1 .btn-send button {
+  width: 200px;
+  height: ;
+  border-radius: 20px;
+} */
+.row-contact .col-1 .btn-send button {
+  background-color: #accfff;
+  color: grey;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  border: 1px solid #accfff;
+  /* transition: all 0.5s; */
+}
+.row-contact .col-1 .btn-send button:hover {
+  background-color: #accfff;
+  color: black;
+  border: none;
+}

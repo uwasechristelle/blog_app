@@ -59,4 +59,8 @@
 }
 .col4 p {
   text-align: center;
+  font-size: 10px;
+}
+.col4 span {
+  color: rgb(102, 102, 190);
 }

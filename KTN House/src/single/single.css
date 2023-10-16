@@ -1,0 +1,100 @@
+.singlepost {
+  display: flex;
+}
+.singlepostwrapper {
+  padding: 20px;
+  padding-right: 50px;
+}
+.singlepostimg {
+  width: 100%;
+  height: 500px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.singleposttitle {
+  text-align: center;
+  margin: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.singleedit {
+  float: right;
+}
+.singleicons {
+  margin-left: 100px;
+  cursor: pointer;
+}
+.singleicons:first-child {
+  color: rgb(38, 38, 38);
+}
+.singlepostinfo {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #8e8571;
+}
+.singlepostdesc {
+  font-size: 18px;
+  color: #666;
+}
+.singlepostdesc::first-letter {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+#testimonial {
+  width: 100%;
+  padding: 70px 0;
+}
+.testimonial-row {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.testimonial-col {
+  flex-basis: 28%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  /* box-shadow: 0 10px 20px 3px #00968814; */
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.testimonial-col p {
+  font-size: 14px;
+}
+.user {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.user img {
+  width: 80px;
+  margin-right: 20px;
+  border-radius: 3px;
+}
+/* .user-info .fa-brands {
+  margin-left: 10px;
+  color: #27c0ff;
+  font-size: 20px;
+} */
+--.user-info .small {
+  color: #009688;
+}
+.testimonial-col:hover {
+  transform: translateY(-7px);
+}
+.addcomments {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #accfff;
+  background-color: #accfff;
+  cursor: pointer;
+}
