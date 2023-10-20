@@ -5,18 +5,20 @@ import React from "react";
 import { FcLike } from "react-icons/fc";
 import { FaComment } from "react-icons/fa";
 import { IoIosEye } from "react-icons/io";
+import { Link } from "react-router-dom";
 
-const PostCard = ({ key, title, bg, profile, likes, comment, views }) => {
+const PostCard = ({ title, description, image, comment }) => {
   return (
-    <div className="post" key={key}>
+    <div className="post" >
       <div className="image-container">
-        <img src={bg} alt="" className="fi-img" />
+        <img src={image} alt="" className="fi-img" />
       </div>
-      <div className="second-img">
-        <img src={profile} alt="" />
+      <div className="desc-cont">
+        <p>{description}</p>
       </div>
+      
       <h4 className="text">{title}</h4>
-      <div className="button">
+      {/* <div className="button">
         <div className="btn1">
           <FcLike />
           <p>{likes}</p>
@@ -29,7 +31,11 @@ const PostCard = ({ key, title, bg, profile, likes, comment, views }) => {
           <IoIosEye />
           <p>{views}</p>
         </div>
-      </div>
+        <div className="dashboard">
+          <p>{edit}</p>
+          <p>{delet}</p>
+        </div> */}
+      {/* </div> */}
     </div>
   );
 };

@@ -1,0 +1,43 @@
+.account-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  background-color: white;
+}
+.col-account {
+  width: 400px;
+  padding: 10px 24px;
+  border-radius: 4px;
+}
+.account1 input {
+  width: 100%;
+  padding: 10px 24px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.col-account h3 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 16px;
+}
+.btn-account button {
+  width: 100%;
+  padding: 10px 24px;
+  margin-bottom: 10px;
+}
+.account {
+  display: flex;
+ 
+}
+.account1 {
+  color: #0d0e0f;
+}
+.account2 {
+  color: rgb(27, 27, 169);
+}
+.btn-account button {
+  font-size: 16px;
+  background-color: #accfff;
+  border: none;
+}

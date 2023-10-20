@@ -1,9 +1,13 @@
 import "./Home.css";
 import Post from "../postp/Post";
+import { Link } from "react-router-dom";
+
 export default function Home() {
   return (
-    <>
-      <Post />
-    </>
+    <Link to="/single">
+      <section>
+        <Post />
+      </section>
+    </Link>
   );
 }

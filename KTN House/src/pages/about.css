@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  list-style: none;
+}
+.about-section {
+  padding: 0;
+  /* gap: -10px; */
+}
+.aaba {
+  padding: 30px;
+}
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+  /* gap: 1px; */
+}
+.abttext {
+  margin-bottom: 20px;
+}
+.abttext h5 {
+  font-size: 16px;
+}
+.abttext p {
+  font-size: 10px;
+  margin-bottom: 1px;
+}
+
+.abt h3 {
+  font-size: 20px;
+  align-items: top;
+}
+.imaje {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.abt-img1 img {
+  width: 230px;
+  height: 230px;
+  border-radius: 10px;
+  margin-top: -0.2rem;
+}
+.abt-img1 {
+  align-self: flex-start;
+}
+.abt-img2 {
+  align-self: center;
+}
+.abt-img2 img {
+  align-self: center;
+  width: 230px;
+  height: 230px;
+  border-radius: 10px;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.abt-time {
+  background-color: rgb(252, 250, 250);
+  width: 600px;
+  height: 150px;
+  padding: 10px 24px;
+  border-radius: 4px;
+  justify-content: space-around;
+}
+.gett {
+  margin-bottom: 20px;
+}
+.get {
+  display: flex;
+  justify-content: space-between;
+}
+.firstget .gettime {
+  margin-bottom: 20px;
+}
+.secondget .gettime3 {
+  margin-bottom: 20px;
+}
+
+.ourservices-container {
+  padding: 50px 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+}
+.service-title {
+  font-size: 20px;
+  font-weight: 600px;
+  text-align: center;
+}
+.service-body {
+  padding: 8px;
+  text-align: center;
+  font-size: 30px;
+}
+.icon-service {
+  text-align: center;
+  font-size: 30px;
+}
+.services h5 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+}
+.services p {
+  font-size: 15px;
+  margin-right: 20px;
+}
+.desc p {
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 770px) {
+  .imaje {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .ourservices-container {
+    text-align: center;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+}
