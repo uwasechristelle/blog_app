@@ -7,11 +7,17 @@
 }
 .row-contact {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  align-items: center;
-  justify-content: end;
+  grid-template-columns: 1fr 1fr;
   padding: 1rem;
-  /* background-color: rgb(198, 43, 43); */
+}
+.contact-image img {
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.col-1 {
+  padding: 24px;
 }
 .row-contact .col-1 .field input {
   width: 500px;
@@ -49,4 +55,9 @@
   background-color: #accfff;
   color: black;
   border: none;
+}
+@media screen and (max-width: 770px) {
+  .row-contact {
+    grid-template-columns: 1fr;
+  }
 }

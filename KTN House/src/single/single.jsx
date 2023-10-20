@@ -8,7 +8,7 @@ export const Single = () => {
       <div className="singlepostwrapper">
         <img
           className="singlepostimg"
-          src="https://images.unsplash.com/photo-1510682999913-847a6d3cf221?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGdpcmwlMjB3aXRoJTIwY29mZmVlfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60"
+          src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
           alt=""
         />
         <h1 className="singleposttitle">

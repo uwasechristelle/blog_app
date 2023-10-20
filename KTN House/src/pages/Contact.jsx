@@ -1,9 +1,18 @@
 import "./contact.css";
+import pic from "../assets/laptop.jpg";
 // import React from "react";
 
 const Contact = () => {
   return (
-    <div className=" row-contact">
+    <div className="row-contact">
+      <div className="contact-image">
+        <img
+          src={
+            "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvbnRhY3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
+          }
+          alt=""
+        />
+      </div>
       <div className="col-1">
         <h3>Contact Us</h3>
         <div className="field">

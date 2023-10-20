@@ -50,10 +50,10 @@
 .testimonial-row {
   width: 80%;
   margin: auto;
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  /* flex-wrap: wrap; */
 }
 .testimonial-col {
   flex-basis: 28%;
@@ -62,7 +62,7 @@
   border-radius: 5px;
   /* box-shadow: 0 10px 20px 3px #00968814; */
   cursor: pointer;
-  transition: transform 0.5s;
+  /* transition: transform 0.5s; */
 }
 .testimonial-col p {
   font-size: 14px;
@@ -73,9 +73,11 @@
   margin: 20px 0;
 }
 .user img {
-  width: 80px;
-  margin-right: 20px;
-  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 /* .user-info .fa-brands {
   margin-left: 10px;
@@ -86,7 +88,7 @@
   color: #009688;
 }
 .testimonial-col:hover {
-  transform: translateY(-7px);
+  /* transform: translateY(-7px); */
 }
 .addcomments {
   width: 200px;

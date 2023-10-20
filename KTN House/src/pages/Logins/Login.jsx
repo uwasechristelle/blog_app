@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+import { FaWindowClose } from "react-icons/fa";
 import "./Login.css";
+import { Account } from "../../pages/Register/account";
 
-export const Login = () => {
+export const Login = ({ click, close }) => {
   return (
     <div className="lgn-container">
       <div className="col-login">
@@ -17,9 +20,11 @@ export const Login = () => {
           />
         </div>
         <div className="btn-login">
+          <Link to="dashboard" onClick={close}>
           <button>Login</button>
+          </Link>
         </div>
-        <div className="accaunt">
+        <div className="accaunt" onClick={click}>
           <h5>Create an account</h5>
         </div>
       </div>

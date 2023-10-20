@@ -102,8 +102,19 @@
   width: 288px;
   height: 430px;
 }
+.loadmore-button {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.loadmore-button button {
+  padding: 10px 24px;
+  border: none;
+  background-color: #accfff;
+  border-radius: 5px;
+}
 @media screen and (max-width: 770px) {
   .body {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
   }
 }
