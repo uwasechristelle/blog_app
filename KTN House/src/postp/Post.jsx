@@ -102,8 +102,9 @@ console.log(setPosts)
             <PostCard
               key={index}
               title={post.title}
-              description={post.description}
+              description={post.content}
               image={post.image}
+              
             />
         ) 
         ): <p>Loading posts...</p>}
