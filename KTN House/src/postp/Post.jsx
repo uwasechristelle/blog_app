@@ -80,15 +80,17 @@ import UniqueCard from "../components/UniqueCard";
 
 export default function Post() {
   const [posts, setPosts] = useState([]);
+  console.log("AllBlogs",posts);
 
   useEffect(() => {
     fetch(
-      "https://zigirumugabe-pacifique.onrender.com/api/klab/blog/ViewAllBlogs"
+      // "https://lastlast.onrender.com/api/post/posts"
+      "https://blogapi-uvr7.onrender.com/api/v1/blog/getAll"
     )
       .then((response) => response.json())
       .then((res) => {
-        if (res.data) {
-          setPosts(res.data);
+        if (res.data.AllBlogs) {
+          setPosts(res.data.AllBlogs);
         }
       });
   }, []);
@@ -99,16 +101,13 @@ console.log(setPosts)
         {posts.length > 0 ? posts.map((post, index) => (
             <PostCard
               key={index}
-              title={post.blogTitle}
-              Description={post.blogContent}
-              image={post.blog_Image}
+              title={post.title}
+              description={post.description}
+              image={post.image}
             />
         ) 
         ): <p>Loading posts...</p>}
       </div>
-      {/* <div className="loadmore-button">
-        <button>Load More</button>
-      </div> */}
     </>
   );
 }

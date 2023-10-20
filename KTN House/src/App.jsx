@@ -29,8 +29,6 @@ function App() {
           <Route path="/account" element={<Account />} />
         </Routes>
       </Router>
-      {/* <About /> */}
-      {/* <Contact /> */}
       <Footer />
     </>
   );

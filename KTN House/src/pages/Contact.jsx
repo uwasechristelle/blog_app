@@ -1,6 +1,6 @@
 import "./contact.css";
 import pic from "../assets/laptop.jpg";
-// import React from "react";
+
 
 const Contact = () => {
   return (

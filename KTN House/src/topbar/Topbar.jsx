@@ -30,7 +30,6 @@ export default function Topbar() {
       <nav className="nav-container">
         <div className="nav-btn">
           <ul>
-            {/* <li>KTN</li> */}
             <li>
               <Link to="/" className="ktn" exact>
                 KTN
