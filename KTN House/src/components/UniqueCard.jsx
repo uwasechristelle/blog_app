@@ -6,23 +6,18 @@ import { FcLike } from "react-icons/fc";
 import { FaComment } from "react-icons/fa";
 import { IoIosEye } from "react-icons/io";
 
-const UniqueCard = () => {
+const UniqueCard = ({ Data }) => {
+  const blogId = Data._id;
   return (
     <div className="post unique">
-      <img src={picture} alt="" className="fi-img" />
+      <img src={Data.image} alt="" className="fi-img" />
       <div className="details">
         <div className="second-img">
-          <img src={profile} alt="" />
+          <img src={Data.profile} alt="" />
         </div>
-        <h3>Health</h3>
-        <h4 className="text">
-          One cannot think well, love well, sleep well, if one has not dined
-          well
-        </h4>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis,
-          quos molestias, eveniet esse, voluptatum.
-        </p>
+
+        <h4>{Data.title}</h4>
+        <p>{Data.description}</p>
         <div className="button">
           <div className="btn1">
             <FcLike />

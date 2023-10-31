@@ -62,9 +62,7 @@ export default function Topbar() {
           <img src={picture} id="menu" />
         </div>
       </nav>
-      <div className="img">
-        <h1>Home</h1>
-      </div>
+
       {menu && (
         <div className="menu">
           <Link to="/" onClick={Handlemenu}>
@@ -84,7 +82,7 @@ export default function Topbar() {
           <button onClick={handleLogin} className="modalBtn">
             <FaWindowClose className="m-icon" />
           </button>
-          <Login click={handleAccount} close={()=> setLogin(false)} />
+          <Login click={handleAccount} close={() => setLogin(false)} />
         </div>
       )}
 

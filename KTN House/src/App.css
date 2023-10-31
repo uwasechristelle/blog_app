@@ -51,6 +51,7 @@
   flex-direction: column;
   color: aliceblue;
   top: 0;
+  z-index: 400;
 }
 .modalBtn {
   width: fit-content;
@@ -62,10 +63,15 @@
   border-radius: 0.5rem;
   position: absolute;
   margin-top: -30rem;
-  margin-right: -70rem;
+  right: 0;
   background-color: brown;
+  margin-right: 1rem;
 }
 .m-icon {
   font-weight: 800;
   font-size: 1.3rem;
+}
+@media screen and (max-width: 770px) {
+  .modalBtn {
+  }
 }

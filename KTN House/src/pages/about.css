@@ -7,7 +7,7 @@
 }
 .about-section {
   padding: 0;
-  /* gap: -10px; */
+  width: 100%;
 }
 .aaba {
   padding: 30px;
@@ -16,7 +16,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding: 20px;
-  /* gap: 1px; */
+
 }
 .abttext {
   margin-bottom: 20px;
@@ -29,7 +29,7 @@
   margin-bottom: 1px;
 }
 
-.abt h3 {
+.abt h5 {
   font-size: 20px;
   align-items: top;
 }
@@ -60,9 +60,10 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  width: 100%;
 }
 .abt-time {
-  background-color: rgb(252, 250, 250);
+  background-color: rgb(226, 223, 223);
   width: 600px;
   height: 150px;
   padding: 10px 24px;
@@ -126,5 +127,13 @@
     text-align: center;
     grid-template-columns: 1fr;
     row-gap: 10px;
+  }
+
+  .time {
+    width: 90vw;
+  }
+
+  .abt-time {
+    width: 90vw;
   }
 }

@@ -4,6 +4,7 @@
   justify-content: center;
   padding: 40px 0;
   background-color: white;
+  border-radius: 5px;
 }
 .col-account {
   width: 400px;
@@ -18,26 +19,26 @@
 }
 .col-account h3 {
   font-size: 20px;
-  color: black;
+  color: rgb(5, 5, 5);
   margin-bottom: 16px;
 }
-.btn-account button {
+.btn-account {
   width: 100%;
   padding: 10px 24px;
   margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 3px;
+  background-color: #599eff;
+  border: none;
+  cursor: pointer;
 }
 .account {
   display: flex;
- 
 }
 .account1 {
   color: #0d0e0f;
 }
 .account2 {
   color: rgb(27, 27, 169);
-}
-.btn-account button {
-  font-size: 16px;
-  background-color: #accfff;
-  border: none;
+  cursor: pointer;
 }

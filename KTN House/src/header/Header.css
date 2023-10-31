@@ -1,0 +1,7 @@
+ .Chart-container {
+  display: flex;
+  /* grid-template-columns: auto auto auto; */
+  padding: 20px 20px;
+  background-color: red;
+  gap: 20px;
+} 

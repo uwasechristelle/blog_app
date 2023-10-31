@@ -1,6 +1,6 @@
 .add {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 10px;
 }
 
@@ -9,4 +9,24 @@
   border-radius: 5px;
   border: none;
   border: 1px solid #0b0b0b;
+  cursor: pointer;
+}
+.page-container {
+  padding-left: 120px;
+}
+.dash-container {
+  flex: 1;
+}
+.text-desc {
+  font-size: 16px;
+  color: rgb(67, 67, 67);
+  line-height: normal;
+  margin-top: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin: 10px;
+  font-weight: 500;
 }

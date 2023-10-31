@@ -1,7 +1,31 @@
-.dashboard {
+.edit_delete {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  /* padding: 20px; */
+  margin-left: 10px;
 }
-.dashboard p {
-  padding-left: 20px;
+.dashboard {
+  background-color: rgb(195, 195, 250);
+  color: rgb(3, 3, 3);
+  font-size: 20px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.dashboard1 {
+  background-color: rgb(195, 195, 250);
+  color: rgb(3, 3, 3);
+  font-size: 20px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+
+  cursor: pointer;
+}
+.views {
+  width: 50px;
+  background-color: rgb(204, 203, 203);
+  border: none;
+  border-radius: 4px;
 }
