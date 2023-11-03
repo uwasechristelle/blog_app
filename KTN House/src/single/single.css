@@ -10,6 +10,7 @@
   height: 500px;
   border-radius: 5px;
   object-fit: cover;
+  margin-top: 3rem;
 }
 .singleposttitle {
   text-align: center;
@@ -30,28 +31,37 @@
 .singlepostinfo {
   margin-bottom: 20px;
   display: flex;
-  justify-content: space-between;
-  font-size: 16px;
-  color: #8e8571;
+  flex-direction: column;
+  gap: 8px;
 }
 .singlepostdesc {
   font-size: 18px;
   color: #666;
+  margin-bottom: 16px;
 }
 .singlepostdesc::first-letter {
   margin-left: 20px;
   font-size: 30px;
   font-weight: 600;
 }
+.singlepostauthor {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+}
+.singlepostdate {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(206, 201, 201);
+}
 #testimonial {
   width: 100%;
   padding: 70px 0;
 }
 .testimonial-row {
-  width: 80%;
-  margin: auto;
-  justify-content: space-between;
-  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .testimonial-col {
   flex-basis: 28%;
@@ -59,7 +69,6 @@
   margin-bottom: 30px;
   border-radius: 5px;
   cursor: pointer;
- 
 }
 .testimonial-col p {
   font-size: 14px;
@@ -80,13 +89,34 @@
 --.user-info .small {
   color: #009688;
 }
+.comment-container {
+  display: flex;
+  gap: 8px;
+}
+.add-cmt {
+  /* color: rgb(228, 17, 17);  */
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(6, 6, 6);
+  padding: 10px 24px;
+  font-size: 20px;
+}
+.send-button {
+  position: relative;
+}
 .addcomments {
-  width: 200px;
-  height: 50px;
+  text-align: center;
+  padding: 10px 24px;
   border-radius: 5px;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #accfff;
-  background-color: #accfff;
+  border: none;
+  background-color: #070707;
   cursor: pointer;
+  position: absolute;
+  bottom: 5px;
+}
+.btn-cmt {
+  color: white;
+  width: 24px;
+  height: 24px;
 }

@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #edf3f3;
+  background-color: #efeeee;
 }
 
 .container {
@@ -23,10 +23,10 @@ body {
 nav {
   background: linear-gradient(
     to left,
-    #e4e2e2 0%,
-    #e4e2e2 50%,
-    #f9f8f9 50%,
-    #f9f8f9 100%
+    #282e31 0%,
+    #282e31 50%,
+    #282e31 50%,
+    #282e31 100%
   );
   /* overflow: hidden; */
   display: grid;
@@ -40,9 +40,11 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  z-index: 100;
 }
 
 .nav-btn ul {
+  color: white;
   display: flex;
   align-items: center;
   list-style: none;
@@ -57,11 +59,15 @@ nav {
   height: 50px;
   border-right: 1px solid #e0e0e0;
 }
-.nav-btn ul li:hover {
-  background-color: #dbdcdc;
+.nav-btn ul li a:hover {
+  color: #dbdcdc;
   cursor: pointer;
 }
-
+.logo {
+  font-weight: 900;
+  color: white;
+  margin-top: 15px;
+}
 .ktn {
   font-weight: 800;
 }
@@ -69,6 +75,7 @@ nav {
   display: flex;
   gap: 1rem;
   align-items: center;
+  color: white;
 }
 .search-btn input {
   width: 100%;
@@ -92,9 +99,8 @@ nav {
   object-fit: cover;
   padding: 1px;
   margin-top: 2px;
-
+  border: 4px solid rgb(250, 249, 249);
 }
-
 
 /* ..............................bg-img header............................/ */
 .img {
@@ -104,6 +110,20 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
+  padding: 0.5%;
+}
+.hero-title {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-title h1 {
+  color: white;
+  font-size: 80px;
+  position: absolute;
 }
 .menuBtn {
   width: 50px;
@@ -118,6 +138,7 @@ nav {
 }
 .menuBtn img {
   width: 20px;
+  background-color: #dbdcdc;
   margin-top: 15px;
 }
 @media screen and (max-width: 770px) {
@@ -142,7 +163,7 @@ nav {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: black;
+    background-color: #282e31;
     color: white;
     padding: 10px;
     width: 100%;

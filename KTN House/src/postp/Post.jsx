@@ -80,33 +80,35 @@ import UniqueCard from "../components/UniqueCard";
 
 export default function Post() {
   const [posts, setPosts] = useState([]);
-  console.log("AllBlogs",posts);
 
   useEffect(() => {
-    fetch(
-      // "https://lastlast.onrender.com/api/post/posts"
-      "https://blogapi-uvr7.onrender.com/api/v1/blog/getAll"
-    )
-      .then((response) => response.json())
-      .then((res) => {
-        if (res.data.AllBlogs) {
-          setPosts(res.data.AllBlogs);
-        }
-      });
+    const getdata = async () => {
+      await fetch("https://lastlast.onrender.com/api/post/posts")
+        .then((response) => response.json())
+        .then((res) => {
+          setPosts(res.data);
+        });
+    };
+    getdata();
   }, []);
-console.log(setPosts)
+  // console.log(setPosts);
   return (
     <>
       <div className="body">
-        {posts.length > 0 ? posts.map((post, index) => (
+        {posts.length > 0 ? (
+          posts.map((post, index) => (
             <PostCard
               key={index}
+              id={post._id}
               title={post.title}
               description={post.description}
               image={post.image}
+              views={post.views}
             />
-        ) 
-        ): <p>Loading posts...</p>}
+          ))
+        ) : (
+          <p>Loading posts...</p>
+        )}
       </div>
     </>
   );

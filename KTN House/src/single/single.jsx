@@ -1,119 +1,150 @@
+import { useEffect, useState } from "react";
 import "./single.css";
 import { BiEdit } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { useParams } from "react-router-dom";
+import { AiOutlineSend } from "react-icons/ai";
 
 export const Single = () => {
+  const { _id } = useParams();
+  const [blogData, setBlogData] = useState({});
+  const [comment, setComments] = useState([]);
+  const [message, setmessage] = useState("");
+  const [author, setauthor] = useState("");
+  const [post, setpost] = useState(null);
+
+  // const [error, setError] = useState(null);
+
+  const getAll = async () => {
+    await fetch(`https://lastlast.onrender.com/api/post/one/${_id}`)
+      .then((response) => response.json())
+      .then((res) => {
+        setBlogData(res.data);
+        setComments(res.data.comments);
+        setauthor(res.data.author);
+      });
+
+    // console.log(res);
+  };
+  useEffect(() => {
+    getAll();
+  }, []);
+  console.log("comments are =", comment);
+  console.log("POSTS", blogData);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("commentBody", message);
+
+    // Retrieve the token from localStorage
+    const token = localStorage.getItem("token");
+
+    console.log("token", token);
+
+    if (token) {
+      const headers = {
+        Authorization: `Bearer ${token}`,
+      };
+
+      fetch(`https://lastlast.onrender.com/api/commenting/comment/${_id}`, {
+        method: "POST",
+        headers: headers,
+        body: formData,
+      })
+        .then((response) => {
+          if (response.ok) {
+            setmessage("");
+
+            console.log("blog added");
+            alert("Comment added successfully");
+            getAll();
+            return response.json();
+          } else {
+            console.error("Request failed with status:", response.status);
+            alert("Request failed with status:", response.status);
+          }
+        })
+        .catch((error) => {
+          alert("Fetch error:", error);
+        });
+    } else {
+      alert("Token not found in localStorage. Please log in.");
+    }
+  };
   return (
     <div className="singlepost">
       <div className="singlepostwrapper">
-        <img
-          className="singlepostimg"
-          src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
-          alt=""
-        />
-        <h1 className="singleposttitle">
-          Lorem ipsum dolor sit amet consectetur.
-          <div className="singleedit">
-            <div className="singleicons">
-              <BiEdit />
-              <RiDeleteBin6Line />
-            </div>
-          </div>
-        </h1>
+        <img className="singlepostimg" src={blogData.image} alt="" />
+        <div className="singleposttitle">
+          <h1>{blogData.title}</h1>
+        </div>
+
+        <div className="singlepostdesc">
+          <p>{blogData.description} </p>
+        </div>
+
         <div className="singlepostinfo">
           <span className="singlepostauthor">
-            Author: <b>Christa Eunice</b>
+            Author:{" "}
+            <b>
+              {author.firstname}
+              &nbsp;
+              {author.lastname}
+            </b>
           </span>
-          <span className="singlepostdate">1 Hour ago</span>
+          <span className="singlepostdate">{blogData.createdAt}</span>
         </div>
-        <p className="singlepostdesc">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium
-          quia, nesciunt nemo nihil quae ipsam optio architecto officiis vel
-          dolore quas vero fugit incidunt praesentium voluptatem? Quaerat
-          obcaecati aperiam fugit!Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Accusantium quia, nesciunt nemo nihil quae ipsam
-          optio architecto officiis vel dolore quas vero fugit incidunt
-          praesentium voluptatem? Quaerat obcaecati aperiam fugit!Lorem ipsum,
-          dolor sit amet consectetur adipisicing elit. Accusantium quia,
-          nesciunt nemo nihil quae ipsam optio architecto officiis vel dolore
-          quas vero fugit incidunt praesentium voluptatem? Quaerat obcaecati
-          aperiam fugit!Lorem ipsum, dolor sit amet consectetur adipisicing
-          elit. Accusantium quia, nesciunt nemo nihil quae ipsam optio
-          architecto officiis vel dolore quas vero fugit incidunt praesentium
-          voluptatem? Quaerat obcaecati aperiam fugit!Lorem ipsum, dolor sit
-          amet consectetur adipisicing elit. Accusantium quia, nesciunt nemo
-          nihil quae ipsam optio architecto officiis vel dolore quas vero fugit
-          incidunt praesentium voluptatem? Quaerat obcaecati aperiam fugit!Lorem
-          ipsum, dolor sit amet consectetur adipisicing elit. Accusantium quia,
-          nesciunt nemo nihil quae ipsam optio architecto officiis vel dolore
-          quas vero fugit incidunt praesentium voluptatem? Quaerat obcaecati
-          aperiam fugit!
-        </p>
         <section id="testimonial">
           <div className="title-text">
             <h1>Comments</h1>
           </div>
           <div class="testimonial-row">
-            <div class="testimonial-col">
-              <div class="user">
-                <img
-                  src="https://images.unsplash.com/photo-1483909796554-bb0051ab60ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybCUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
-                  alt=""
-                />
-
-                <div className="user-info">
-                  <h4>R WAYNE</h4>
-                  <small>@wyneleo</small>
+            <form onSubmit={handleSubmit}>
+              <div className="comment-container">
+                <div className="cmt-txt">
+                  <textarea
+                    className="add-cmt"
+                    cols="80"
+                    rows="1 "
+                    type="text"
+                    value={message}
+                    onChange={(e) => {
+                      setmessage(e.target.value);
+                    }}
+                    placeholder="Add Comment"
+                  />
+                </div>
+                <div className="send-button">
+                  <button type="submit" className="addcomments">
+                    <AiOutlineSend className="btn-cmt" />
+                  </button>
                 </div>
               </div>
-              <p>
-                Donec eget ultricies sapi. Sed porttitor, mauris ater lob
-                facilisis, elit sapie eliefend ligula.Donec eget ultricies sapi.
-                Donec eget ultricies sapi. Sed porttitor, mauris ater lob
-                facilisis, elit sapie eliefend ligula. Donec eget ultricies
-                sapi.{" "}
-              </p>
-            </div>
-            <div class="testimonial-col">
-              <div className="user">
-                <img
-                  src="https://images.unsplash.com/photo-1483909796554-bb0051ab60ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybCUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
-                  alt=""
-                />
-
-                <div className="user-info">
-                  <h4>Atoni Alice</h4>
-                  <small>@Aliceatoni</small>
-                </div>
+            </form>
+            {Array.isArray(comment) && comment.length > 0 ? (
+              <div className="comment">
+                {comment.map((comments, index) => (
+                  <div className="user" key={index}>
+                    <img
+                      className="user-img"
+                      src="https://images.unsplash.com/photo-1601762603339-fd61e28b698a?auto=format&fit=crop&q=60&w=600&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGZhc2hpb258ZW58MHx8MHx8fDA%3D"
+                      alt=""
+                    />
+                    <div className="user-info">
+                      <h4>{comments.user.lastname}</h4>
+                      <small>{comments.user.email}</small>
+                      <p>{comments.commentBody}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <p>
-                Donec eget ultricies sapi. Sed porttitor, mauris ater lob
-                facilisis, elit sapie eliefend ligula.Donec eget ultricies sapi.
-                Donec eget ultricies sapi.
-              </p>
-            </div>
-            <div className="testimonial-col">
-              <div class="user">
-                <img
-                  src="https://images.unsplash.com/photo-1483909796554-bb0051ab60ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybCUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60"
-                  alt=""
-                />
-                <div className="user-info">
-                  <h4>Morgan Katia</h4>
-                  <small>@morgan4katy</small>
-                </div>
-              </div>
-              <p>
-                Donec eget ultricies sapi. Sed porttitor, mauris ater lob
-                facilisis, elit sapie eliefend ligula.Donec eget ultricies sapi.
-                Donec eget ultricies sapi. Sed porttitor, mauris ater lob
-                facilisis, elit sapie eliefend ligula. Donec eget ultricies
-                sapi.{" "}
-              </p>
-            </div>
+            ) : (
+              <p>No comments to display</p>
+            )}
           </div>
         </section>
-        <button className="addcomments">Add Comments</button>
       </div>
     </div>
   );

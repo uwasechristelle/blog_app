@@ -14,9 +14,9 @@ const Footer = () => {
         <div className="column">
           <h1>KTN</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur,
+            Lorem ipsum dolor sit amet,
             <br />
-            adipisicing elit. Molestias, delectus!
+            adipisicing. Molestias, delectus!
           </p>
           <div className="icons">
             <BsFacebook />
@@ -44,15 +44,15 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        {/* column2 */}
+        {/*............. column2 .....................*/}
         <div className="col3">
-          <h4>Get In Touch</h4>
+          <h5>Get In Touch</h5>
           <ul className="second-col">
             <li>Working Hours</li>
             <li>Monday to Friday:09:00am-23:00pm</li>
-            <li>saturday:09:00am-12:00pm</li>
-            <li>Sunday:09:00am-12:00am</li>
-            <li>Your Presence brings joy to Our home</li>
+            <li>saturday & Sunday:09:00am-12:00pm</li>
+            {/* <li>Sunday:09:00am-12:00am</li> */}
+            <li>"Your Presence brings joy to Our home."</li>
           </ul>
         </div>
       </div>

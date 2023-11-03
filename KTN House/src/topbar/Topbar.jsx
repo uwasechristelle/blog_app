@@ -22,19 +22,18 @@ export default function Topbar() {
   };
 
   const [menu, setMenu] = useState(false);
+  
   const Handlemenu = () => {
     setMenu((prev) => !prev);
   };
   return (
     <>
       <nav className="nav-container">
+        <div className="logo">
+          KTN HOUSE
+        </div>
         <div className="nav-btn">
           <ul>
-            <li>
-              <Link to="/" className="ktn" exact>
-                KTN
-              </Link>
-            </li>
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -62,9 +61,7 @@ export default function Topbar() {
           <img src={picture} id="menu" />
         </div>
       </nav>
-      <div className="img">
-        <h1>Home</h1>
-      </div>
+
       {menu && (
         <div className="menu">
           <Link to="/" onClick={Handlemenu}>
@@ -84,7 +81,7 @@ export default function Topbar() {
           <button onClick={handleLogin} className="modalBtn">
             <FaWindowClose className="m-icon" />
           </button>
-          <Login click={handleAccount} close={()=> setLogin(false)} />
+          <Login click={handleAccount} close={() => setLogin(false)} />
         </div>
       )}
 
