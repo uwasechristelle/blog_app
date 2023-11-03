@@ -12,7 +12,7 @@ const About = () => {
       <Heropage title="About us" />
       <div className="about-section">
         <div className="aaba">
-          <p>Fashion is like eating, you shouldn't stick to the same menu.</p>
+          <p>"Fashion is like eating, you shouldn't stick to the same menu".</p>
         </div>
         <div className="about">
           <div className="imaje">

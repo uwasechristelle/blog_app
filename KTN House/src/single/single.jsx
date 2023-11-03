@@ -3,6 +3,7 @@ import "./single.css";
 import { BiEdit } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { useParams } from "react-router-dom";
+import { AiOutlineSend } from "react-icons/ai";
 
 export const Single = () => {
   const { _id } = useParams();
@@ -101,19 +102,25 @@ export const Single = () => {
           </div>
           <div class="testimonial-row">
             <form onSubmit={handleSubmit}>
-              <textarea
-                className="add-cmt"
-                cols="30"
-                rows="2"
-                type="text"
-                value={message}
-                onChange={(e) => {
-                  setmessage(e.target.value);
-                }}
-                placeholder="Add Comment"
-              />
-              <div className="send-button">
-                <button className="addcomments">Post Comment</button>
+              <div className="comment-container">
+                <div className="cmt-txt">
+                  <textarea
+                    className="add-cmt"
+                    cols="80"
+                    rows="1 "
+                    type="text"
+                    value={message}
+                    onChange={(e) => {
+                      setmessage(e.target.value);
+                    }}
+                    placeholder="Add Comment"
+                  />
+                </div>
+                <div className="send-button">
+                  <button type="submit" className="addcomments">
+                    <AiOutlineSend className="btn-cmt" />
+                  </button>
+                </div>
               </div>
             </form>
             {Array.isArray(comment) && comment.length > 0 ? (

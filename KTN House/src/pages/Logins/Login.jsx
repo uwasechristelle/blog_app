@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
-import {  BsEyeFill  } from "react-icons/bs";
-
+import { BsEyeFill } from "react-icons/bs";
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { Account } from "../../pages/Register/account";
-
 
 export const Login = ({ click, close }) => {
   const navigate = useNavigate();
@@ -55,7 +53,7 @@ export const Login = ({ click, close }) => {
 
   return (
     <div className="lgn-container">
-      <div className="col-login">
+      <div className="colo-login">
         <h3>Hello! Welcome Back</h3>
         <div className="login1">
           <input
@@ -77,7 +75,7 @@ export const Login = ({ click, close }) => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-         < BsEyeFill />
+          <BsEyeFill />
         </div>
         <button
           className="btn-login"
@@ -89,7 +87,7 @@ export const Login = ({ click, close }) => {
         </button>
 
         <div className="accaunt" onClick={click}>
-          <h5>Create an account</h5>
+          <h5>Don't have an account?Register</h5>
         </div>
       </div>
     </div>

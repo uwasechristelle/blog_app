@@ -22,19 +22,18 @@ export default function Topbar() {
   };
 
   const [menu, setMenu] = useState(false);
+  
   const Handlemenu = () => {
     setMenu((prev) => !prev);
   };
   return (
     <>
       <nav className="nav-container">
+        <div className="logo">
+          KTN HOUSE
+        </div>
         <div className="nav-btn">
           <ul>
-            <li>
-              <Link to="/" className="ktn" exact>
-                KTN
-              </Link>
-            </li>
             <li>
               <Link to="/">Home</Link>
             </li>

@@ -59,9 +59,9 @@
   padding: 70px 0;
 }
 .testimonial-row {
-  width: 80%;
-  margin: auto;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .testimonial-col {
   flex-basis: 28%;
@@ -89,24 +89,34 @@
 --.user-info .small {
   color: #009688;
 }
+.comment-container {
+  display: flex;
+  gap: 8px;
+}
 .add-cmt {
   /* color: rgb(228, 17, 17);  */
   background-color: transparent;
   width: 100%;
-
   border: none;
   border-bottom: 2px solid rgb(6, 6, 6);
-  padding: 10px;
+  padding: 10px 24px;
   font-size: 20px;
 }
-
+.send-button {
+  position: relative;
+}
 .addcomments {
-  width: 150px;
-  height: 50px;
+  text-align: center;
+  padding: 10px 24px;
   border-radius: 5px;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #accfff;
-  background-color: #accfff;
+  border: none;
+  background-color: #070707;
   cursor: pointer;
+  position: absolute;
+  bottom: 5px;
+}
+.btn-cmt {
+  color: white;
+  width: 24px;
+  height: 24px;
 }

@@ -5,7 +5,7 @@ import { BsFillPostcardFill } from "react-icons/bs";
 import { FaComment } from "react-icons/fa";
 import { FaUsers } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
-import Header from "../../header/Header";
+import Barchart from "../../barchart/Barchart";
 
 export const Postpage = () => {
   const [posts, setPosts] = useState([]);
@@ -62,7 +62,7 @@ export const Postpage = () => {
           </div>
         </div>
       </div>
-      <Header />
+      <Barchart />
     </>
   );
 };
